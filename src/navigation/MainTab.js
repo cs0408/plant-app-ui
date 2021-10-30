@@ -17,6 +17,7 @@ export default MainTab = () => {
           height: 60,
         },
         tabBarShowLabel: false,
+        headerShown: false,
         tabBarIcon: ({ focused }) => {
           const tintColor = focused ? COLORS.primary : COLORS.gray;
 
@@ -32,7 +33,7 @@ export default MainTab = () => {
             case "Box":
               return (
                 <Image
-                  source={icons.flash}
+                  source={icons.cube}
                   style={{ tintColor: tintColor, width: 25, height: 25 }}
                 />
               );
@@ -58,14 +59,14 @@ export default MainTab = () => {
             case "Search":
               return (
                 <Image
-                  source={icons.flash}
+                  source={icons.search}
                   style={{ tintColor: tintColor, width: 25, height: 25 }}
                 />
               );
             case "Favourite":
               return (
                 <Image
-                  source={icons.flash}
+                  source={icons.heartGreenOutline}
                   style={{ tintColor: tintColor, width: 25, height: 25 }}
                 />
               );
