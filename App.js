@@ -1,27 +1,14 @@
+import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
-import { images, icons } from "./src/constants";
+// Navigator
+import { NavigationContainer } from "@react-navigation/native";
+import { MainStack } from "./src/navigation";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Image
-        source={icons.back}
-        style={{ width: 100, height: 100, tintColor: "red" }}
-      />
-      <Image source={images.plant1} style={{ width: 100, height: 100 }} />
-      {/* <StatusBar style="auto" /> */}
-    </View>
+    <NavigationContainer>
+      <MainStack />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});

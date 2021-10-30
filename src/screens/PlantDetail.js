@@ -1,10 +1,12 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
-const PlantDetail = () => {
+const PlantDetail = ({ navigation }) => {
   return (
-    <View>
-      <Text>PlantDetail</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <Text>PlantDetail</Text>
+      </TouchableOpacity>
     </View>
   );
 };

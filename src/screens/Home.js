@@ -1,11 +1,14 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={{ justifyContent: "center", alignItems: "center", flex: 1 }}>
+      <TouchableOpacity onPress={() => navigation.navigate("PlantDetail")}>
+        <Text>Home</Text>
+      </TouchableOpacity>
     </View>
   );
 };
+
 export default Home;
