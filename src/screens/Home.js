@@ -272,14 +272,20 @@ const Home = ({ navigation }) => {
                   flex: 1,
                 }}
               >
-                <TouchableOpacity style={{ flex: 1 }}>
+                <TouchableOpacity
+                  style={{ flex: 1 }}
+                  onPress={() => navigation.navigate("PlantDetail")}
+                >
                   <Image
                     source={images.plant6}
                     resizeMode="cover"
                     style={{ width: "100%", height: "100%", borderRadius: 20 }}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ flex: 1, marginTop: SIZES.font }}>
+                <TouchableOpacity
+                  style={{ flex: 1, marginTop: SIZES.font }}
+                  onPress={() => navigation.navigate("PlantDetail")}
+                >
                   <Image
                     source={images.plant7}
                     resizeMode="cover"
@@ -294,6 +300,7 @@ const Home = ({ navigation }) => {
                     flex: 1,
                     marginLeft: SIZES.font,
                   }}
+                  onPress={() => navigation.navigate("PlantDetail")}
                 >
                   <Image
                     source={images.plant7}
@@ -345,7 +352,29 @@ const Home = ({ navigation }) => {
                   justifyContent: "flex-end",
                 }}
               >
-                <Text>Add New</Text>
+                <Text
+                  style={{ color: COLORS.secondary, fontSize: SIZES.body3 }}
+                >
+                  Add New
+                </Text>
+                {/* add button  */}
+                <TouchableOpacity
+                  style={{
+                    marginLeft: SIZES.base,
+                    width: 35,
+                    height: 35,
+                    borderRadius: 10,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: COLORS.gray,
+                  }}
+                >
+                  <Image
+                    source={icons.plus}
+                    resizeMode="contain"
+                    style={{ width: 15, height: 15 }}
+                  />
+                </TouchableOpacity>
               </View>
             </View>
           </View>
